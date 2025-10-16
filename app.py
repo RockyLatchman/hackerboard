@@ -21,7 +21,7 @@ def home():
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
     #sign in
-    pass
+    return render_template('hello.html')
 
 @app.route('/hello-again')
 def hello_again():
@@ -77,7 +77,7 @@ def change_challenge(challenge_number):
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
-    pass
+    return render_template('profile.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
