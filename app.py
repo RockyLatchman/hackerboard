@@ -1,12 +1,16 @@
 from flask import Flask, render_template, session, redirect, url_for
+from dotenv import load_dotenv
+from flask_wtf.csrf import CSRFProtect
 import redis
 import os
-from dotenv import load_dotenv
+
 
 load_dotenv('.env')
 app = Flask(__name__)
 app.config['REDIS_URL='] = os.environ.get('REDIS_URL')
 app.config['REDIS_PORT'] = os.environ.get('REDIS_PORT')
+app.config['SECRET_KEY'] =os.environ.get('SECRET_KEY')
+csrf = CSRFProtect(app)
 redis_cl = redis.Redis(host='localhost', port=6380, db=0, decode_responses=True)
 
 

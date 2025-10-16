@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="profile-card">
+    <h2>Edit profile</h2>
+    <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="handle">Change handle</label>
+        <input type="text" name="handle" id="handle">
+        <label for="email">Change e-mail address</label>
+        <input type="email" name="email" id="email">
+        <label for="password">Change password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit" value="Save changes">
+    </form>
+</div>
+{% endblock %}
