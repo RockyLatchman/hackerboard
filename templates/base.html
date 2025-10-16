@@ -6,6 +6,21 @@
           <script src="{{ url_for('static', filename='js/main.js') }}"></script>
       </head>
       <body>
+        <header>
+            <nav>
+              <menu>
+                  <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                  <li><a href="{{ url_for('teams') }}">Teams</a></li>
+                  <li><a href="{{ url_for('hackers') }}">Hackers</a></li>
+                  <li><a href="{{ url_for('challenges') }}">Challenges</a></li>
+                  <li><a href="{{ url_for('profile') }}">Profile</a></li>
+              </menu>
+              <a href="{{ url_for('goodbye') }}">[Sign out]</a>
+            </nav>
+        </header>
+        <main>
+          <h1>HACKERBOARD</h1>
           {% block content %}{% endblock %}
+        </main>
       </body>
   </html>

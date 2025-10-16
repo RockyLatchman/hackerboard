@@ -12,7 +12,7 @@ redis_cl = redis.Redis(host='localhost', port=6380, db=0, decode_responses=True)
 
 @app.route('/')
 def home():
-    pass
+    return render_template('index.html')
 
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
