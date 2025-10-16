@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="signin-card">
+  <h2>Sign in</h2>
+  <form method="POST">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" required>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+      <span><a href="">Forgot password?</a></span>
+      <input type="submit" name="signup" value="Sign up">
+      <input type="submit" name="signin" value="Sign in">
+  </form>
+</div>
+{% endblock %}

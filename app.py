@@ -25,7 +25,7 @@ def hello():
 
 @app.route('/hello-again')
 def hello_again():
-    pass
+    return render_template('hello-again.html')
 
 @app.route('/goodbye')
 def goodbye():
