@@ -1,16 +1,20 @@
 from flask import Flask, render_template, session, redirect, url_for
+from models import Challenge, Alchemy, Hacker, Message, Team, Event
 from dotenv import load_dotenv
 from flask_wtf.csrf import CSRFProtect
+from sqlmodel import create_engine, Session
 import redis
 import os
-
+import uuid
 
 load_dotenv('.env')
 app = Flask(__name__)
 app.config['REDIS_URL='] = os.environ.get('REDIS_URL')
 app.config['REDIS_PORT'] = os.environ.get('REDIS_PORT')
-app.config['SECRET_KEY'] =os.environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['DATABASE_URL'] = os.environ.get('DATABASE_URL')
 csrf = CSRFProtect(app)
+db_engine = create_engine(app.config['DATABASE_URL'], echo=True)
 redis_cl = redis.Redis(host='localhost', port=6380, db=0, decode_responses=True)
 
 
