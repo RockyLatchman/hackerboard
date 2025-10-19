@@ -1,0 +1,66 @@
+* {
+ padding: 0;
+ margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+ background: #ddd;
+}
+
+
+pre {
+  color: #000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.6em;
+  font-weight: 900;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 55%;
+  height: 50px;
+  margin: 25px auto 0 auto;
+  background: #D5D4D4;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+}
+
+nav menu {
+  width: 85%;
+  margin: auto 0 auto 75px;
+}
+
+div #sign-out {
+  display: block;
+  margin: -40px 0 0 auto;
+  width: 10%;
+  text-decoration: none;
+  color: #000;
+  font: 500 0.8em "Source Code Pro", monospace;
+}
+
+nav menu li {
+  display: inline;
+  margin-right: 50px;
+}
+
+nav menu li a {
+  text-decoration: none;
+  color: #000;
+  font: 500 0.8em "Source Code Pro", monospace;
+}
+
+main div {
+  margin-top: 35px;
+}

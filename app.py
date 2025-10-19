@@ -6,6 +6,8 @@ from sqlmodel import create_engine, Session
 import redis
 import os
 import uuid
+from pyfiglet import Figlet
+
 
 load_dotenv('.env')
 app = Flask(__name__)
@@ -18,9 +20,14 @@ db_engine = create_engine(app.config['DATABASE_URL'], echo=True)
 redis_cl = redis.Redis(host='localhost', port=6380, db=0, decode_responses=True)
 
 
+def ascii_art_text():
+    hackerboard_text = 'H a c k e r b o a r d'
+    figlet_font = Figlet(font="banner3-D", width=400)
+    return figlet_font.renderText(hackerboard_text)
+
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', ascii_art_text=ascii_art_text())
 
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
@@ -93,7 +100,7 @@ def change_challenge(challenge_number):
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
-    return render_template('profile.html')
+    return render_template('profile.html', ascii_art_text=ascii_art_text())
 
 if __name__ == '__main__':
     app.run(debug=True)
