@@ -55,6 +55,18 @@ def join_team():
 def team_invitation():
     pass
 
+@app.route('/events')
+def events():
+    pass
+
+@app.route('/event/<event_id>')
+def event(event_id):
+    pass
+
+@app.route('/join/event/<event_id>')
+def join_event(event_id):
+    pass
+
 @app.route('/hackers')
 def hackers():
     pass
