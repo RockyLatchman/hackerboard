@@ -68,7 +68,8 @@ main div {
 /* Forms(Profile, Sign up, Sign in) */
 
 .profile-card,
-.signup-card {
+.signup-card,
+.signin-card {
   width: 33.5%;
   height: auto;
   background: #eee;
@@ -78,7 +79,8 @@ main div {
 }
 
 .profile-card h2,
-.signup-card h2 {
+.signup-card h2,
+.signin-card h2 {
   color: #000;
   font: 900 1.2em "Source Code Pro", monospace;
   width: 75%;
@@ -86,18 +88,21 @@ main div {
 }
 
 .profile-card form,
- .signup-card form {
+.signup-card form,
+.signin-card form {
   padding: 10px 45px;
 }
 
 .profile-card label,
-.signup-card label {
+.signup-card label,
+.signin-card label {
   color: #000;
   font: 500 0.8em "Source Code Pro", monospace;
 }
 
 .profile-card input,
-.signup-card input {
+.signup-card input,
+.signin-card input {
   width: 100%;
   height: 35px;
   color: #000;
@@ -105,6 +110,40 @@ main div {
   margin: 5px 0 15px 0;
   outline: transparent;
 }
+
+.signup-card span,
+.signin-card span {
+  display: block;
+  width: 100%;
+}
+
+.signup-card a,
+.signin-card a {
+  color: #000;
+  font: 500 0.8em "Source Code Pro", monospace;
+}
+
+.signup-card input[name='signin'],
+.signup-card input[name='signup'],
+.signin-card input[name='signin'],
+.signin-card input[name='signup']{
+  width: 145px;
+  height: 40px;
+  background: #B6B6B6;
+  color: #000;
+  font: 500 0.8em "Source Code Pro", monospace;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.signin-card input[name='signup']{
+  margin-left: 115px;
+}
+
+.signin-card input[name='signin']{
+  margin-left: 10px;
+}
+
 
 /* Profile */
 
@@ -125,31 +164,10 @@ main div {
   margin-bottom: 75px;
 }
 
-.signup-card span {
-  display: block;
-  width: 100%;
-}
-
-.signup-card input[name='signin'],
-.signup-card input[name='signup'] {
-  width: 145px;
-  height: 40px;
-  background: #B6B6B6;
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
-  margin-top: 25px;
-  cursor: pointer;
-}
-
 .signup-card input[name='signin'] {
   margin-left: 115px;
 }
 
 .signup-card input[name='signup'] {
   margin-left: 10px;
-}
-
-.signup-card a {
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
 }
