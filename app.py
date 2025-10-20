@@ -32,11 +32,11 @@ def home():
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
     #sign in
-    return render_template('hello.html')
+    return render_template('hello.html', ascii_art_text=ascii_art_text())
 
 @app.route('/hello-again')
 def hello_again():
-    return render_template('hello-again.html')
+    return render_template('hello-again.html', ascii_art_text=ascii_art_text())
 
 @app.route('/goodbye')
 def goodbye():
