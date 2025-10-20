@@ -5,12 +5,13 @@ import uuid
 
 
 class Challenge(SQLModel, table=True):
+   __tablename__ = 'challenges'
    challenge_id: Optional[uuid.UUID] = Field(default_factory=uuid.uuid4, primary_key=True)
    problem: str
    solution: str
-   hint: str
+   challenge_hint: str
    difficulty_level: str
-   source: str = Field(default='Hackerboard')
+   challenge_source: str = Field(default='Hackerboard')
    date_added: datetime = Field(default_factory=datetime.now(timezone.utc))
    attempts: List['Alchemy'] = Relationship(back_populates='challenge')
 
@@ -46,7 +47,7 @@ class Alchemy(SQLModel, table=True):
    __tablename__ = 'alchemy'
    alchemy_id: Optional[uuid.UUID] = Field(default_factory=uuid.uuid4, primary_key=True)
    answer: str
-   correct: bool
+   correct: bool | None = None
    date_submitted: datetime = Field(default_factory=datetime.now(timezone.utc))
    challenge_id: Optional[uuid.UUID] = Field(foreign_key='challenge.challenge_id')
    hacker_id: Optional[uuid.UUID] = Field(foreign_key='hacker.hacker_id')
@@ -71,7 +72,7 @@ class Alchemy(SQLModel, table=True):
 class Hacker(SQLModel, table=True):
    __tablename__ = 'hackers'
    hacker_id: Optional[uuid.UUID] = Field(default_factory=uuid.uuid4, primary_key=True)
-   name: str = Field(default='Anon')
+   fullname: str = Field(default='Anon')
    handle: str = Field(unique=True)
    email: str = Field(unique=True)
    password: str
@@ -80,7 +81,7 @@ class Hacker(SQLModel, table=True):
    score: int = Field(default=0)
    date_created: datetime = Field(default_factory=datetime.now(timezone.utc))
    last_active: datetime = Field(default_factory=datetime.now(timezone.utc))
-   country: str
+   country: str = Field(default='United States')
    bio: str
    sent_messages: list['Message'] = Relationship(back_populates='hacker')
    challenge_attempts: list['Alchemy'] = Relationship(back_populates='hacker')
@@ -136,7 +137,7 @@ class Event(SQLModel, table=True):
    name: str = Field(index=True)
    description: str
    event_date: datetime = Field(default_factory=datetime.now(timezone.utc))
-   winners: str | None = None
+   winning_team: str | None = None
    duration: int
    invite_only: str = Field(default='No')
    admin_id: Optional[uuid.UUID] = Field(foreign_key="team.team_id")
@@ -188,7 +189,7 @@ class Team(SQLModel, table=True):
    name: str = Field(unique=True, index=True)
    date_created: datetime = Field(default_factory=datetime.now(timezone.utc))
    ranking: int | None = None
-   status: str
+   status: str = Field(default='active')
    score: int = Field(default=0)
    hacker_id: uuid.UUID = Field(foreign_key="hacker.hacker_id")
    hackers: list['Hacker'] = Relationship(back_populates='hacker')
