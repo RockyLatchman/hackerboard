@@ -37,6 +37,13 @@ class Challenge(SQLModel, table=True):
         except Exception as e:
            raise ValueError('Unable to access challenges') from e
 
+   def next_challenge_set(self, session: Session, challenges: List['challenges']):
+       '''Exclude UUID's of previous results and return another
+       10 challenges'''
+       challenge_uuids = [challenge.challenge_id for challenge in challenges]
+       challenges = session.exec(select(Challenge).where(~Challenge.challenge_id.in_(challenge_uuids)).limit(10))
+       return [challenge.challenge_id for challenge in challenges]
+
 
    def get_challenge(self):
        pass
