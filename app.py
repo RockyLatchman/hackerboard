@@ -1,5 +1,5 @@
 from flask import Flask, render_template, session, redirect, url_for
-from models import Challenge, Alchemy, Hacker, Message, Team, Event
+from models import Challenge, Alchemy, Hacker, Team, Event
 from dotenv import load_dotenv
 from flask_wtf.csrf import CSRFProtect
 from sqlmodel import create_engine, Session
@@ -14,9 +14,10 @@ app = Flask(__name__)
 app.config['REDIS_URL='] = os.environ.get('REDIS_URL')
 app.config['REDIS_PORT'] = os.environ.get('REDIS_PORT')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-app.config['DATABASE_URL'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 csrf = CSRFProtect(app)
-db_engine = create_engine(app.config['DATABASE_URL'], echo=True)
+db_engine = create_engine(app.config['SQLALCHEMY_DATABASE_URI'], echo=True)
 redis_cl = redis.Redis(host='localhost', port=6380, db=0, decode_responses=True)
 
 
@@ -44,7 +45,7 @@ def goodbye():
 
 @app.route('/dashboard')
 def dashboard():
-    pass
+    return render_template('dashboard.html')
 
 @app.route('/teams')
 def teams():
