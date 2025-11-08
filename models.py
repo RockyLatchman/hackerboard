@@ -7,7 +7,7 @@ import uuid
 class Challenge(SQLModel, table=True):
    __tablename__ = 'challenges'
    challenge_id: Optional[uuid.UUID] = Field(default_factory=uuid.uuid4, primary_key=True, index=True)
-   problem: str
+   problem: str = Field(unique=True)
    solution: str
    challenge_hint: str
    difficulty_level: str

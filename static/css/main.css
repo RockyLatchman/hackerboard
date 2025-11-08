@@ -170,3 +170,10 @@ main div {
 .signup-card input[name='signup'] {
   margin-left: 10px;
 }
+
+/* Dashboard */
+
+.left-content img {
+width: 64px;
+height: 64px;
+}

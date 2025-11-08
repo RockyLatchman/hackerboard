@@ -45,7 +45,7 @@ def goodbye():
 
 @app.route('/dashboard')
 def dashboard():
-    return render_template('dashboard.html')
+    return render_template('dashboard.html', ascii_art_text=ascii_art_text())
 
 @app.route('/teams')
 def teams():
