@@ -81,7 +81,7 @@ def hackers():
 
 @app.route('/hacker/<handle>')
 def hacker(handle):
-    pass
+    return render_template('hacker.html', ascii_art_text=ascii_art_text())
 
 @app.route('/challenges')
 def challenges():

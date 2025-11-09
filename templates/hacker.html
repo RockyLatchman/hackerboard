@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="content">
+    <div class="row-content">
+     <h4>Hacker</h4>
+     <div class="row-heading">
+         <div class="left-content">
+             <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+         </div>
+          <div class="right-content">
+              <ul>
+                <li>Vlad_009</li>
+                <li>C</li>
+              </ul>
+          </div>
+          <ul>
+              <li>Ranking: #1<img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+              <li>Team: Codescape</li>
+              <li>Score: 10000</li>
+              <li>Challenges: 2399</li>
+          </ul>
+      </div>
+      <div class="row-body">
+          <p>
+              I’m a C programmer I love making games if you are an English speaker interested in Russian I can help you with that.
+              I work at DevCo Inc in Moscow if you would like to speak to me just message.
+          </p>
+      </div>
+    </div>
+</div>
+{% endblock %}
