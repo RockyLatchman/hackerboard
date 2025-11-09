@@ -77,7 +77,7 @@ def join_event(event_id):
 
 @app.route('/hackers')
 def hackers():
-    pass
+    return render_template('hackers.html', ascii_art_text=ascii_art_text())
 
 @app.route('/hacker/<handle>')
 def hacker(handle):

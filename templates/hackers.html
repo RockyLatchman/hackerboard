@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="content">
+   <h4>Hackers</h4>
+    <div class="row-content">
+     <div class="row-heading">
+         <ul>
+           <li>Handle</li>
+           <li>Rank</li>
+           <li>Challenges</li>
+           <li>Score</li>
+         </ul>
+      </div>
+      <div class="content-body">
+          <div class="left-content">
+              <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+          </div>
+           <div class="right-content">
+              <p>Vlad_009</p>
+              <p>C</p>
+           </div>
+           <div class="row-body">
+              <ul>
+                <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                <li>2399</li>
+                <li>10000</li>
+              </ul>
+           </div>
+      </div>
+      <div class="content-body">
+          <div class="left-content">
+              <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+          </div>
+           <div class="right-content">
+              <p>AliciaCodes001</p>
+              <p>Python</p>
+           </div>
+           <div class="row-body">
+              <ul>
+                <li>No. 2 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                <li>2111</li>
+                <li>10000</li>
+              </ul>
+           </div>
+      </div>
+         <div class="content-body">
+             <div class="left-content">
+                 <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+             </div>
+              <div class="right-content">
+                 <p>PHPHacker0x7</p>
+                 <p>PHP * JavaScript</p>
+              </div>
+              <div class="row-body">
+                 <ul>
+                   <li>No. 3 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                   <li>2001</li>
+                   <li>10000</li>
+                 </ul>
+              </div>
+         </div>
+    </div>
+</div>
+{% endblock %}
