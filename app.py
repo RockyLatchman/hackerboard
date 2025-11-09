@@ -53,7 +53,7 @@ def teams():
 
 @app.route('/team/<team_name>')
 def team(team_name):
-    pass
+    return render_template('team.html', ascii_art_text=ascii_art_text())
 
 @app.route('/join/team/<team_name>')
 def join_team():

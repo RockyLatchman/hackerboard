@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="content">
+    <div class="row-content">
+     <h4>Team</h4>
+     <div class="row-heading">
+         <div class="left-content">
+             <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+         </div>
+          <div class="right-content">
+              <ul>
+                <li>Codescape</li>
+                <li>We are a herd of C programmers</li>
+                <li>No. 1<img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+              </ul>
+          </div>
+          <ul>
+            <li>Origin: 01/23/2023<span>Members: 2399</span></li>
+          </ul>
+      </div>
+      <div class="row-body">
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas congue consectetur. Aliquam semper nisl est,
+              ut cursus sem sagittis in. Pellentesque venenatis mi nec ipsum porttitor, ac consequat dolor scelerisque. Mauris
+              blandit erat mattis malesuada fringilla. Suspendisse a congue elit. Aliquam facilisis libero sem, sed luctus neque
+              vestibulum ac. Fusce placerat non ante eget eleifend. Pellentesque faucibus quam vitae iaculis malesuada.
+          </p>
+          <p>
+              Quisque hendrerit vulputate cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam gravida
+              varius ultricies. Maecenas at viverra quam. Nullam purus erat, rutrum a sodales ac, pellentesque a mi. Nullam ut
+              dignissim nulla. Etiam nec nisl aliquam, posuere eros eu, pharetra mi. Nunc luctus placerat nisi vel pulvinar.
+              Praesent ipsum metus, gravida in nunc eu, accumsan venenatis felis. Fusce lacinia ut ante sed vestibulum. Nulla
+          </p>
+          <span><a href="">Request to join</a></span>
+      </div>
+    </div>
+</div>
+{% endblock %}
