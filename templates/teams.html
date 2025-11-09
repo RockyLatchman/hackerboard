@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <div class="top-content">
+        <h4>Teams</h4>
+        <div class="content-heading">
+            <ul>
+              <li>Team</li>
+              <li>Rank</li>
+              <li>Challenges</li>
+              <li>Score</li>
+            </ul>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+             <div class="right-content">
+                <p>Codescape</p>
+                <p>Members: 201</p>
+             </div>
+             <div class="hacker-stats">
+                <ul>
+                  <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                  <li>2399</li>
+                  <li>100000</li>
+                </ul>
+             </div>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+             <div class="right-content">
+                <p>Codescape</p>
+                <p>Members: 201</p>
+             </div>
+             <div class="hacker-stats">
+                <ul>
+                  <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                  <li>2399</li>
+                  <li>100000</li>
+                </ul>
+             </div>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+             <div class="right-content">
+                <p>UKHackers001</p>
+                <p>Members: 201</p>
+             </div>
+             <div class="hacker-stats">
+                <ul>
+                  <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                  <li>2399</li>
+                  <li>100000</li>
+                </ul>
+             </div>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+             <div class="right-content">
+                <p>PHPHackers</p>
+                <p>Members: 201</p>
+             </div>
+             <div class="hacker-stats">
+                <ul>
+                  <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                  <li>2399</li>
+                  <li>100000</li>
+                </ul>
+             </div>
+        </div>
+        <div class="content-body">
+             <div class="left-content">
+                 <img src="{{ url_for('static', filename='images/profile/Image2.png') }}" alt="">
+             </div>
+              <div class="right-content">
+                 <p>CodeBebop</p>
+                 <p>Members: 201</p>
+              </div>
+              <div class="hacker-stats">
+                 <ul>
+                   <li>No. 2 <img src="{{ url_for('static', filename='images/star-solid.png')}}" alt=""></li>
+                   <li>1399</li>
+                   <li>1000</li>
+                 </ul>
+              </div>
+        </div>
+    </div>
+    <div class="row-content">
+        <div class="left-content">
+            <div class="header-content">
+                <section class="profile">
+                    <h4>Your team</h4>
+                    <div class="left-content">
+                        <img src="{{ url_for('static', filename='images/profile/asso-myron-3nZy59lC_v0-unsplash.png') }}" alt="">
+                    </div>
+                     <div class="right-content">
+                        <p>Vlad_009</p>
+                        <p>Active: Weekly</p>
+                        <p>Joined: 3/16/2022</p>
+                     </div>
+                </section>
+            </div>
+            <div class="body-content">
+                <h4>Team _Codescape</h4>
+                <div class="left-content">
+                    <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+                </div>
+                 <div class="right-content">
+                    <p>PHPHacker0x7</p>
+                    <p>PHP * JavaScript</p>
+                 </div>
+                 <div class="left-content">
+                     <img src="{{ url_for('static', filename='images/profile/Image2.png') }}" alt="">
+                 </div>
+                  <div class="right-content">
+                     <p>DevonCodes</p>
+                     <p>C * JavaScript</p>
+                  </div>
+                  <div class="left-content">
+                      <img src="{{ url_for('static', filename='images/profile/Image22.png') }}" alt="">
+                  </div>
+                   <div class="right-content">
+                      <p>Dexxx_001</p>
+                      <p>PHP * JavaScript * C#</p>
+                   </div>
+            </div>
+        </div>
+        <div class="right-content">
+          <div class="header-content">
+              <span>Message team</span>
+          </div>
+          <div class="body-content">
+             <form method="POST">
+                 <select name="team-member">
+                     <option value="erikcodes">ErikCodes</option>
+                     <option value="coder001">Coder001</option>
+                     <option value="eliacodes">EliaCodes</option>
+                     <option value="hacker001">Hacker001</option>
+                 </select>
+                 <textarea name="message" placeholder="How's everybody?"></textarea>
+                 <input type="submit"  name="team-message" value="Send">
+             </form>
+          </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
