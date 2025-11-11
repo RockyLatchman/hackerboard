@@ -19,10 +19,11 @@
         <input type="text" name="team" id="team">
         <label for="team-bio">Team bio</label><br>
         <textarea name="team-bio" id="team-bio"></textarea><br>
+        <input type="submit" name="remove-team" value="Remove team">
         <input type="submit" name="add-team" value="Add team">
     </form>
-    <h2>Team members</h2>
     <div class="team-list">
+        <h2>Team members</h2>
         <div class="team-member">
             <div class="left-content">
                <img src="{{ url_for('static', filename='images/profile/bridget.png')}}" alt="">

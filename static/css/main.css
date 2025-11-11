@@ -195,6 +195,24 @@ margin: 15px 0 0 auto;
 cursor: pointer;
 }
 
+.profile-card input[name='remove-team'],
+.profile-card input[name='add-team']
+{
+display:block;
+float: right;
+margin: 10px 0 45px 15px;
+}
+
+.team-list {
+margin-top: 100px;
+}
+
+.team-list h2 {
+color: #000;
+font: 900 1.2em "Source Code Pro", monospace;
+width: 75%;
+margin: 3.5% 0 2% 8.5%;
+}
 
 .team-member {
 display: flex;
