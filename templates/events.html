@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <div class="top-content">
+        <h4>Events</h4>
+        <div class="content-heading">
+            <ul>
+              <li>Hackathon</li>
+              <li>Attendees</li>
+              <li>Challenges</li>
+              <li>Event details</li>
+            </ul>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+             <div class="right-content">
+                <p>Hydra <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></p>
+                <p>Teams: 15</p>
+             </div>
+             <div class="event-stats">
+                <ul>
+                  <li>1567</li>
+                  <li>2399</li>
+                  <li><a href="#">Find out more</a></li>
+                </ul>
+             </div>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+            <div class="right-content">
+               <p>Pythonista 2025 <img src="{{ url_for('static', filename='images/star-solid.png')}}" alt=""></p>
+               <p>Teams: 12</p>
+            </div>
+            <div class="event-stats">
+               <ul>
+                 <li>1000</li>
+                 <li>2399</li>
+                 <li><a href="#">Find out more</a></li>
+               </ul>
+            </div>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+             <div class="right-content">
+                <p>UKHackers001 <img src="{{ url_for('static', filename='images/star-solid.png')}}" alt=""></p>
+                <p>Teams: 10</p>
+             </div>
+             <div class="hacker-stats">
+                <ul>
+                  <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                  <li>2399</li>
+                  <li>100000</li>
+                </ul>
+             </div>
+        </div>
+        <div class="content-body">
+            <div class="left-content">
+                <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+            </div>
+             <div class="right-content">
+                <p>CodeBebop</p>
+                <p>Teams: 5</p>
+             </div>
+             <div class="hacker-stats">
+                <ul>
+                  <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                  <li>2399</li>
+                  <li>100000</li>
+                </ul>
+             </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

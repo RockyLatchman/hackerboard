@@ -65,7 +65,7 @@ def team_invitation(team_name):
 
 @app.route('/events')
 def events():
-    pass
+   return render_template('events.html')
 
 @app.route('/event/<event_id>')
 def event(event_id):
