@@ -60,8 +60,8 @@ def join_team():
     pass
 
 @app.route('/team/<team_name>/invite', methods=['GET', 'POST'])
-def team_invitation():
-    pass
+def team_invitation(team_name):
+    return render_template('team_invitation.html', ascii_art_text=ascii_art_text(), team_name=team_name.capitalize())
 
 @app.route('/events')
 def events():

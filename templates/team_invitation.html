@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="signin-card invitation">
+  <h2>Team invite</h2>
+  <p>
+    Congratulations you have been accepted by Team {{ team_name }}. Enter the invite
+    code sent to your e-mail below
+  </p>
+  <form method="POST">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <label for="invitation-code">Invitation code</label>
+      <input type="text" name="invitation-code" id="invitation-code" required>
+      <input type="submit" name="send-code" value="Send code">
+  </form>
+</div>
+{% endblock %}
