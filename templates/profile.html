@@ -10,7 +10,61 @@
         <input type="email" name="email" id="email">
         <label for="password">Change password</label>
         <input type="password" name="password" id="password">
-        <input type="submit" value="Save changes">
+        <input type="submit" name="update-profile" value="Save changes">
     </form>
+    <h2>Add Team</h2>
+    <form method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="team-name">Team name</label>
+        <input type="text" name="team" id="team">
+        <label for="team-bio">Team bio</label><br>
+        <textarea name="team-bio" id="team-bio"></textarea><br>
+        <input type="submit" name="add-team" value="Add team">
+    </form>
+    <h2>Team members</h2>
+    <div class="team-list">
+        <div class="team-member">
+            <div class="left-content">
+               <img src="{{ url_for('static', filename='images/profile/bridget.png')}}" alt="">
+            </div>
+            <div class="right-content">
+                <span>BridgetCodes</span>
+            </div>
+            <ul>
+                <li>#1<img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                <li>Score: 10000</li>
+                <li>Challenges: 2399</li>
+                <li><input type="checkbox" name="team-member"></li>
+            </ul>
+        </div>
+        <div class="team-member">
+            <div class="left-content">
+               <img src="{{ url_for('static', filename='images/profile/bridget.png')}}" alt="">
+            </div>
+            <div class="right-content">
+                <span>BridgetCodes</span>
+            </div>
+            <ul>
+                <li>#1<img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                <li>Score: 10000</li>
+                <li>Challenges: 2399</li>
+                <li><input type="checkbox" name="team-member"></li>
+            </ul>
+        </div>
+        <div class="team-member">
+            <div class="left-content">
+               <img src="{{ url_for('static', filename='images/profile/bridget.png')}}" alt="">
+            </div>
+            <div class="right-content">
+                <span>BridgetCodes</span>
+            </div>
+            <ul>
+                <li>#1<img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                <li>Score: 10000</li>
+                <li>Challenges: 2399</li>
+                <li><input type="checkbox" name="team-member"></li>
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}

@@ -66,7 +66,6 @@ main div {
 
 /* Forms(Profile, Sign up, Sign in) */
 
-.profile-card,
 .signup-card,
 .signin-card {
   width: 33.5%;
@@ -144,31 +143,20 @@ main div {
 }
 
 
-/* Profile */
 
-.profile-card input[type='submit'] {
-  display: block;
-  width: 150px;
-  height: 40px;
-  background: #B6B6B6;
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
-  margin: 5px 0 0 auto;
-  cursor: pointer;
-}
 
 /* Sign up  */
 
 .signup-card {
-  margin-bottom: 75px;
+margin-bottom: 75px;
 }
 
 .signup-card input[name='signin'] {
-  margin-left: 115px;
+margin-left: 115px;
 }
 
 .signup-card input[name='signup'] {
-  margin-left: 10px;
+margin-left: 10px;
 }
 
 /* Dashboard */
@@ -176,4 +164,89 @@ main div {
 .left-content img {
 width: 64px;
 height: 64px;
+}
+
+/* Profile */
+
+.profile-card {
+width: 37%;
+height: auto;
+background: #eee;
+margin: 50px auto 0 auto;
+padding: 25px 25px 75px 25px;
+border: 1px solid #B3B1B1;
+}
+
+.profile-card textarea {
+width: 100%;
+height: 120px;
+border: 1px solid #B3B1B1;
+outline: transparent;
+}
+
+.profile-card input[type='submit'] {
+display: block;
+width: 150px;
+height: 40px;
+background: #B6B6B6;
+color: #000;
+font: 500 0.8em "Source Code Pro", monospace;
+margin: 15px 0 0 auto;
+cursor: pointer;
+}
+
+
+.team-member {
+display: flex;
+flex-direction: row;
+width: 85%;
+border-bottom: 1px solid #ccc;
+margin: 0 auto;
+}
+
+.team-member .left-content {
+display: flex;
+align-items: center;
+padding: 0;
+margin: 0;
+}
+
+.team-member .left-content img {
+width: 32px;
+height: 32px;
+margin-right: 3px;
+}
+
+.team-member ul li input[name='team-member'] {
+margin: 5px 5px 0 auto;
+width: 15px;
+height: 15px;
+}
+
+.team-member .right-content {
+display: flex;
+align-items: center;
+padding: 0;
+margin: 0;
+}
+
+.team-member span {
+list-style-type: none;
+font: 500 0.8em "Source Code Pro", monospace;
+margin-right: 15px;
+}
+
+.team-member ul {
+display: flex;
+align-items: center;
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+.team-member ul li {
+list-style-type: none;
+font: 500 0.8em "Source Code Pro", monospace;
+margin: 5px 18px 5px 0;
+padding: 8px 0;
 }
