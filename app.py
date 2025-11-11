@@ -65,11 +65,12 @@ def team_invitation(team_name):
 
 @app.route('/events')
 def events():
-   return render_template('events.html')
+   return render_template('events.html', ascii_art_text=ascii_art_text())
 
-@app.route('/event/<event_id>')
-def event(event_id):
-    pass
+@app.route('/event/<event_name>')
+@app.route('/event/<event_name>/')
+def event(event_name):
+    return render_template('event.html', ascii_art_text=ascii_art_text())
 
 @app.route('/join/event/<event_id>')
 def join_event(event_id):
