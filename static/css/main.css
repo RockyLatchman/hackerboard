@@ -12,138 +12,135 @@ body {
 }
 
 pre {
-  color: #000;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.4em;
-  font-weight: 900;
-  text-align: center;
+color: #000;
+font-family: "Courier New", Courier, monospace;
+font-size: 0.4em;
+font-weight: 900;
+text-align: center;
 }
 
 header {
-  width: 100%;
-  height: 100px;
+width: 100%;
+height: 100px;
 }
 
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 55%;
-  height: 50px;
-  margin: 25px auto 0 auto;
-  background: #D5D4D4;
-  border: 1px solid rgba(112, 112, 112, 0.2);
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 55%;
+height: 50px;
+margin: 25px auto 0 auto;
+background: #D5D4D4;
+border: 1px solid rgba(112, 112, 112, 0.2);
 }
 
 nav menu {
-  width: 85%;
-  margin: auto 0 auto 75px;
+width: 85%;
+margin: auto 0 auto 75px;
 }
 
 div #sign-out {
-  display: block;
-  margin: -40px 0 0 auto;
-  width: 10%;
-  text-decoration: none;
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
+display: block;
+margin: -40px 0 0 auto;
+width: 10%;
+text-decoration: none;
+color: #000;
+font: 500 0.8em "Source Code Pro", monospace;
 }
 
 nav menu li {
-  display: inline;
-  margin-right: 50px;
+display: inline;
+margin-right: 50px;
 }
 
 nav menu li a {
-  text-decoration: none;
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
+text-decoration: none;
+color: #000;
+font: 500 0.8em "Source Code Pro", monospace;
 }
 
 main div {
-  margin-top: 5px;
+margin-top: 5px;
 }
 
 /* Forms(Profile, Sign up, Sign in) */
 
 .signup-card,
 .signin-card {
-  width: 33.5%;
-  height: auto;
-  background: #eee;
-  margin: 50px auto 0 auto;
-  padding: 25px;
-  border: 1px solid #B3B1B1;
+width: 33.5%;
+height: auto;
+background: #eee;
+margin: 50px auto 0 auto;
+padding: 25px;
+border: 1px solid #B3B1B1;
 }
 
 .profile-card h2,
 .signup-card h2,
 .signin-card h2 {
-  color: #000;
-  font: 900 1.2em "Source Code Pro", monospace;
-  width: 75%;
-  margin: 3.5% 0 1.2% 8.5%;
+color: #000;
+font: 900 1.2em "Source Code Pro", monospace;
+width: 75%;
+margin: 3.5% 0 1.2% 8.5%;
 }
 
 .profile-card form,
 .signup-card form,
 .signin-card form {
-  padding: 10px 45px;
+padding: 10px 45px;
 }
 
 .profile-card label,
 .signup-card label,
 .signin-card label {
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
+color: #000;
+font: 500 0.8em "Source Code Pro", monospace;
 }
 
 .profile-card input,
 .signup-card input,
 .signin-card input {
-  width: 100%;
-  height: 35px;
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
-  margin: 5px 0 15px 0;
-  outline: transparent;
+width: 100%;
+height: 35px;
+color: #000;
+font: 500 0.8em "Source Code Pro", monospace;
+margin: 5px 0 15px 0;
+outline: transparent;
 }
 
 .signup-card span,
 .signin-card span {
-  display: block;
-  width: 100%;
+display: block;
+width: 100%;
 }
 
 .signup-card a,
 .signin-card a {
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
+color: #000;
+font: 500 0.8em "Source Code Pro", monospace;
 }
 
 .signup-card input[name='signin'],
 .signup-card input[name='signup'],
 .signin-card input[name='signin'],
 .signin-card input[name='signup']{
-  width: 145px;
-  height: 40px;
-  background: #B6B6B6;
-  color: #000;
-  font: 500 0.8em "Source Code Pro", monospace;
-  margin-top: 25px;
-  cursor: pointer;
+width: 145px;
+height: 40px;
+background: #B6B6B6;
+color: #000;
+font: 500 0.8em "Source Code Pro", monospace;
+margin-top: 25px;
+cursor: pointer;
 }
 
 .signin-card input[name='signup']{
-  margin-left: 115px;
+margin-left: 115px;
 }
 
 .signin-card input[name='signin']{
-  margin-left: 10px;
+margin-left: 10px;
 }
-
-
-
 
 /* Sign up  */
 
@@ -162,9 +159,296 @@ margin-left: 10px;
 /* Dashboard */
 
 .left-content img {
-width: 64px;
-height: 64px;
+width: 54px;
+height: 54px;
+margin-right: 15px;
 }
+
+.top-content {
+width: 55%;
+height: 340px;
+margin: 40px auto 0 auto;
+padding: 10px;
+background: #F5F5F5;
+}
+
+.content-heading {
+width: 95%;
+margin: 0 auto;
+}
+
+.content-heading h4 {
+color: #000;
+font: 900 1.2em "Source Code Pro", monospace;
+width: 75%;
+margin: 3.5% 0 2% 0;
+}
+
+.content-heading ul {
+display: flex;
+flex-direction: row;
+border-bottom: 0.1px dashed rgba(0,0,0,0.2);
+width: 100%;
+}
+
+.content-heading ul li {
+display: flex;
+list-style-type: none;
+width: 50%;
+justify-content: left;
+color: #424040;
+font: 700 0.8em "Space Mono", monospace;
+}
+
+.content-heading ul li:nth-child(2) {
+margin-left: 170px;
+}
+
+.content-heading ul li:nth-child(3) {
+margin-left: 25px;
+}
+
+.content-heading ul li:nth-child(4) {
+margin-left: 50px;
+}
+
+.content-body {
+display: flex;
+flex-direction: row;
+width: 95%;
+margin: 0 auto;
+padding: 5px 0;
+border-bottom: 0.1px dashed rgba(0,0,0,0.2);
+}
+
+.content-body:last-of-type {
+border-bottom: none;
+}
+
+.content-body .right-content {
+display: flex;
+align-items: center;
+justify-content: left;
+width: 23%;
+}
+
+.content-body .right-content p:nth-child(odd),
+.row-content .left-content .right-content p:nth-child(odd) {
+color: #673434;
+font: 700 0.8em "Space Mono", monospace;
+}
+
+.content-body .right-content p:nth-child(even),
+.row-content .left-content .right-content p:nth-child(even) {
+color: #424040;
+font: 700 0.8em "Source Code Pro", monospace;
+}
+
+.content-body .hacker-stats  {
+display: flex;
+align-items: center;
+justify-content: left;
+width: 65%;
+}
+
+.content-body .hacker-stats ul {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 100%;
+}
+
+.content-body .hacker-stats ul li {
+list-style-type: none;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+color: #424040;
+font: 700 0.8em "Source Code Pro", monospace;
+}
+
+.row-content {
+display: flex;
+flex-direction: row;
+margin: 30px auto 0 auto;
+width: 56%;
+}
+
+.row-content .left-content {
+background: #fff;
+width: 37%;
+}
+
+.row-content .left-content .header-content section {
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 85px;
+margin: 25px auto 0 auto;
+border-bottom: 0.1px dashed rgba(0,0,0,0.2);
+}
+
+.row-content .header-content section .left-content {
+width: 20%;
+}
+
+.row-content .left-content .header-content section .left-content img {
+display: flex;
+width: 48px;
+height: 48px;
+justify-content: center;
+align-items: center;
+margin: 0 0 0 15px;
+}
+
+.row-content .left-content .header-content section .right-content ul {
+margin-right: auto;
+padding: 10px 0;
+width: 85%;
+}
+
+.row-content .left-content .header-content section .right-content ul li {
+list-style-type: none;
+color: #424040;
+font: 700 0.8em "Source Code Pro", monospace;
+}
+
+.row-content .body-content h4 {
+color: #424040;
+font: 700 0.8em "Source Code Pro", monospace;
+margin: 15px 0 0 15px;
+}
+
+.row-content .body-content .team-member-details {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+border-bottom: 0.1px dashed rgba(0,0,0,0.2);
+height: auto;
+padding: 15px 0 !important;
+margin: 5px 0 !important;
+}
+
+.team-member-details .left-content {
+display: flex;
+align-items: center;
+width: 15%;
+}
+
+.team-member-details .right-content  {
+display: flex;
+justify-content: left;
+align-items: center;
+padding: 0 !important;
+margin: 0 !important;
+}
+
+.team-member-details .right-content ul li {
+list-style-type: none;
+color: #424040;
+font: 500 0.8em "Source Code Pro", monospace;
+}
+
+/* Dashboard - Right column */
+
+.row-content .right-content {
+background: #fff;
+width: 67%;
+height: auto;
+margin-left: 25px;
+padding-bottom: 50px;
+}
+
+.right-content .body-content {
+background: #fff;
+width: 90%;
+margin: 50px 0 0 25px;
+}
+
+.row-content .right-content .header-content {
+width: 35%;
+margin: 15px 0 0 auto;
+}
+
+.row-content .right-content span {
+display: inline-block;
+color: #000;
+font: 500 0.8em "Space Mono", monospace;
+}
+
+.right-content .body-content ul {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border-bottom: 0.1px dashed rgba(0,0,0,0.2);
+width: 100%;
+}
+
+.right-content .body-content ul li {
+list-style-type: none;
+padding: 5px 0;
+text-align: right;
+}
+
+.right-content .body-content ul li:first-of-type {
+color: #000;
+font: 700 1em "Space Mono", monospace;
+}
+
+.right-content .body-content ul li:last-of-type {
+width: 45%;
+color: #000;
+font: 500 0.9em "Space Mono", monospace;
+}
+
+.row-content .right-content p {
+color: #000;
+font: 400 0.8em "Space Mono", monospace;
+}
+
+.row-content .right-content p:first-of-type {
+color: #000;
+font: 400 0.8em "Space Mono", monospace;
+margin: 15px 0 10px 0;
+}
+
+.row-content .right-content button {
+color: #000;
+font: 700 0.8em "Source Code Pro", monospace;
+margin: 25px 0 10px 0;
+width: 130px;
+height: 40px;
+border: none;
+cursor: pointer;
+float: right;
+}
+
+.row-content .right-content button[name='change-problem'] {
+background: transparent;
+border: 2px solid #000;
+margin-right: 15px;
+}
+
+.row-content .right-content button[name='solve-problem'] {
+color: #000;
+font: 700 0.8em "Source Code Pro", monospace;
+}
+
+/* Dashboard - Footer */
+
+
+
+
+
+footer {
+
+}
+
+footer {
+
+}
+
 
 /* Profile */
 
@@ -287,3 +571,5 @@ font: 500 0.8em "Source Code Pro", monospace;
 margin: 15px 0 0 auto;
 cursor: pointer;
 }
+
+/* */

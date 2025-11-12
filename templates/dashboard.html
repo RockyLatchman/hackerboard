@@ -2,8 +2,8 @@
 {% block content %}
 <main>
     <div class="top-content">
-        <h4>Dashboard</h4>
         <div class="content-heading">
+            <h4>Top ranking hackers</h4>
             <ul>
               <li>Handle</li>
               <li>Rank</li>
@@ -16,12 +16,14 @@
                 <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
             </div>
              <div class="right-content">
-                <p>PHPHacker0x7</p>
-                <p>PHP * JavaScript</p>
+                <div>
+                    <p>PHPHacker0x7</p>
+                    <p>PHP * JavaScript</p>
+                </div>
              </div>
              <div class="hacker-stats">
                 <ul>
-                  <li>No. 1 <img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
+                  <li>No. 1 &nbsp;<img src="{{ url_for('static', filename='images/crown-solid.png')}}" alt=""></li>
                   <li>2399</li>
                   <li>100000</li>
                 </ul>
@@ -32,12 +34,14 @@
                  <img src="{{ url_for('static', filename='images/profile/Image2.png') }}" alt="">
              </div>
               <div class="right-content">
-                 <p>DevonCodes</p>
-                 <p>C * JavaScript</p>
+                <div>
+                   <p>DevonCodes</p>
+                   <p>C * JavaScript</p>
+                </div>
               </div>
               <div class="hacker-stats">
                  <ul>
-                   <li>No. 2 <img src="{{ url_for('static', filename='images/star-solid.png')}}" alt=""></li>
+                   <li>No. 2  &nbsp;<img src="{{ url_for('static', filename='images/star-solid.png')}}" alt=""></li>
                    <li>1399</li>
                    <li>1000</li>
                  </ul>
@@ -48,12 +52,14 @@
                   <img src="{{ url_for('static', filename='images/profile/Image22.png') }}" alt="">
               </div>
                <div class="right-content">
-                  <p>Dexxx_001</p>
-                  <p>PHP * JavaScript * C#</p>
+                  <div>
+                      <p>Dexxx_001</p>
+                      <p>PHP * JavaScript * C#</p>
+                  </div>
                </div>
                <div class="hacker-stats">
                   <ul>
-                    <li>No. 3 <img src="{{ url_for('static', filename='images/star-solid.png')}}" alt=""></li>
+                    <li>No. 3  &nbsp;<img src="{{ url_for('static', filename='images/star-solid.png')}}" alt=""></li>
                     <li>899</li>
                     <li>100</li>
                   </ul>
@@ -63,40 +69,54 @@
     <div class="row-content">
         <div class="left-content">
             <div class="header-content">
-                <section class="profile">
+                <section>
                     <div class="left-content">
                         <img src="{{ url_for('static', filename='images/profile/asso-myron-3nZy59lC_v0-unsplash.png') }}" alt="">
                     </div>
-                     <div class="right-content">
-                        <p>Vlad_009</p>
-                        <p>Active: Weekly</p>
-                        <p>Joined: 3/16/2022</p>
+                     <div class="right-content profile-details">
+                         <ul>
+                           <li>Vlad_009</li>
+                           <li>Active: Weekly</li>
+                           <li>Joined: 3/16/2022</li>
+                         </ul>
                      </div>
                 </section>
             </div>
             <div class="body-content">
                 <h4>Team _Codescape</h4>
-                <div class="left-content">
-                    <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+                <div class="team-member-details">
+                    <div class="left-content">
+                        <img src="{{ url_for('static', filename='images/profile/dh.png') }}" alt="">
+                    </div>
+                    <div class="right-content">
+                        <ul>
+                        <li>PHPHacker0x7</li>
+                        <li>PHP * JavaScript</li>
+                        </ul>
+                    </div>
                 </div>
-                 <div class="right-content">
-                    <p>PHPHacker0x7</p>
-                    <p>PHP * JavaScript</p>
-                 </div>
+                <div class="team-member-details">
                  <div class="left-content">
                      <img src="{{ url_for('static', filename='images/profile/Image2.png') }}" alt="">
                  </div>
                   <div class="right-content">
-                     <p>DevonCodes</p>
-                     <p>C * JavaScript</p>
+                      <ul>
+                        <li>DevonCodes</li>
+                        <li>C * JavaScript</li>
+                      </ul>
                   </div>
+                </div>
+                <div class="team-member-details">
                   <div class="left-content">
                       <img src="{{ url_for('static', filename='images/profile/Image22.png') }}" alt="">
                   </div>
                    <div class="right-content">
-                      <p>Dexxx_001</p>
-                      <p>PHP * JavaScript * C#</p>
+                       <ul>
+                          <li>Dexxx_001</li>
+                           <li>PHP * JavaScript * C#</li>
+                       </ul>
                    </div>
+                </div>
             </div>
         </div>
         <div class="right-content">
@@ -125,8 +145,8 @@
                  multiple of 3 and 5, we already print "FizzBuzz", but now we
                  also have the digit condition.
              </p>
-             <button type="button"  name="change-problem" id="change-problem">Change problem</button>
              <button type="button" name="solve-problem" id="solve-problem">Solve problem</button>
+             <button type="button"  name="change-problem" id="change-problem">Change problem</button>
           </div>
         </div>
     </div>
@@ -149,6 +169,5 @@
             <div class="progress-bubble" data-ranking="6"></div>
             <span>Sept, 1</div>
         </div>
-    </div>
 </footer>
 {% endblock %}
